@@ -1,0 +1,220 @@
+/* ===== Global Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6feaf3, #f4d1d1);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ===== Container ===== */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #ffffffcc;
+    padding: 30px 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* ===== Heading ===== */
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #299f5d;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* ===== User Input ===== */
+.user-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.user-container p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.user-input-container {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    gap: 10px;
+}
+
+#user-input {
+    flex: 1;
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+    border: 2px solid #299f5d;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+#user-input:focus {
+    border-color: #3ac17d;
+    box-shadow: 0 0 10px rgba(58, 193, 125, 0.4);
+}
+
+#search-btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    border: none;
+    background: #299f5d;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#search-btn:hover {
+    background: #3ac17d;
+    transform: scale(1.05);
+}
+
+/* ===== Progress Circles ===== */
+.progress {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.progress-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    background: conic-gradient(#299f5d var(--progress-degree,0%), #d3d3d3 0%);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: 0.5s;
+}
+
+.circle span {
+    position: relative;
+    z-index: 2;
+    font-size: 1.1rem;
+}
+
+.circle p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Different colors for each difficulty */
+.easy-progress {
+    background: conic-gradient(#4caf50 var(--progress-degree,0%), #d3f0d3 0%);
+}
+.medium-progress {
+    background: conic-gradient(#ff9800 var(--progress-degree,0%), #ffe5b3 0%);
+}
+.hard-progress {
+    background: conic-gradient(#f44336 var(--progress-degree,0%), #f8c1bd 0%);
+}
+
+/* ===== Stats Cards ===== */
+.stats-card {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.card {
+    background: linear-gradient(145deg, #ffbb33, #ff8800);
+    width: 180px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.card p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+    .progress {
+        gap: 15px;
+    }
+    .circle {
+        width: 110px;
+        height: 110px;
+    }
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-input-container {
+        flex-direction: column;
+    }
+    #search-btn {
+        width: 100%;
+    }
+    .progress {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 80%;
+    }
+}
