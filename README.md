@@ -1,7 +1,7 @@
 Project Name: LeetMetric – LeetCode User Metrics Dashboard
 
 Description:
-LeetMetric is a responsive web application that allows users to track and visualize their LeetCode problem-solving statistics. The project emphasizes dynamic data fetching, interactive UI, and client-side processing. It helped me gain hands-on experience in web development, networking, and JavaScript concepts.
+Built a responsive web app to track and visualize LeetCode stats, applying DOM manipulation, error handling, regex validation, async/await, API calls, CORS handling, and JSON response parsing. Gained hands-on experience in network requests, accessing API data dynamically, and creating an interactive, user-friendly interface.
 
 Technical Highlights & Learnings:
 
